@@ -2,7 +2,9 @@ import React from 'react';
 import FetchData from './components/FetchData'
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 
+
 export default function App() {
+  
   return (
     <View style={styles.container}>
         
