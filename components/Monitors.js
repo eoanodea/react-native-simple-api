@@ -52,19 +52,18 @@ export default class FetchData extends React.Component {
           <Text>Total Monitors: {pagination.total}</Text>
           {data.map((dat, i) => {
             return (
-              <div key={i} style={{width: '80%', margin: '20px auto'}}>
-                <h2>
-                  {i}: {dat.friendly_name}
-                </h2>
+              <View key={i} style={{margin: 20}}>
+                <Text style={{fontSize: 40}}>
+                 {i}: {dat.friendly_name}
+                </Text>     
                 {Object.entries(dat).map((subdat, j) => {
                   return (
                     <Text key={j} style={{fontSize: 20}}>
-                      {subdat[0].replace("_", " ")}: {subdat[1]}<br />
+                      {subdat[0].replace("_", " ")}: {subdat[1]}
                     </Text>
                   );
                 })}
-                
-              </div>
+              </View>
             );
           })}
         </View>
